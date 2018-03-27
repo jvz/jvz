@@ -1,0 +1,245 @@
+\documentclass{friggeri-cv}
+\begin{document}
+\header{matt}{sicker}{functional software craftsman}
+
+% sidebar
+\begin{aside}
+    \section{about}
+    \phone{847-736-8133}
+    \email{mattsicker@apache.org}
+    \website{musigma.blog}
+    \website{github.com/jvz}
+    \section{programming}
+    Scala, Kotlin, Java
+    Bash, Python, Groovy
+    Ruby, Lisp, C, C++
+    SQL, Haskell, \LaTeX
+    HTML, CSS, JavaScript
+    PHP
+    \section{frameworks}
+    Akka, Kafka, Spark
+    Spring, OSGi, Camel
+    Vert.x, Spring Reactor
+    Hibernate, ATG, Rails
+    Drupal, Django
+    \section{databases}
+    PostgreSQL, MySQL
+    MariaDB, Oracle
+    Cassandra, Hive
+    Elasticsearch
+    SQL Server, MongoDB
+    \section{tools}
+    Git, Subversion, CVS
+    Bazaar, Mercurial
+    Gradle, Maven, Ant
+    SBT, Make, Docker
+    Mesos, Marathon
+    Jenkins, Bamboo, JIRA
+    GitHub, Bit Bucket
+    \section{servers}
+    Karaf, Tomcat, Jetty
+    Apache, WebLogic
+    ActiveMQ, ZeroMQ
+    \section{os}
+    GNU/Linux, macOS
+    \section{interests}
+    functional programming
+    mathematics
+    machine learning
+    microservices
+    devops
+    modularity
+    fast data
+\end{aside}
+
+\section{abstract}
+A senior software engineer and craftsman working on fast data and big data
+applications with a focus on functional programming, reactive streams,
+reactive microservices, architecture, devops, and development.
+Loves learning about and evangelizing new technology and refining existing
+tech. Expert in Scala and Java, and experienced or familiar with several
+other languages and platforms. PMC Chair of the Apache Logging Services
+project, member and VP of the Apache Software Foundation, contributor to several
+open source projects outside the ASF, board member of the Illinois Java
+User Group, technical blogger, and speaker at conferences and meetup
+groups. Long time advocate of free/libre and open source software.
+
+\section{history}
+
+\begin{entrylist}
+    \entry{Dec 2017--\\Now}{Consulting Senior Software Engineer}{Spantree Technology Group, Chicago, IL}{
+        Senior software engineer independently consulting with Spantree Technology Group
+        in Chicago. Projects and responsibilities include:
+        \begin{itemize}
+            \item Developed a fake data generator for benchmarking various Elasticsearch
+                mapping and indexing scenarios using RxKotlin.
+            \item Developed a query load tester for Elasticsearch using the Gatling framework.
+            \item Collaborated with principle engineer to write statements of work.
+        \end{itemize}
+    }
+\end{entrylist}
+\begin{entrylist}
+    \entry{Nov 2016--\\Nov 2017}{Senior Consultant}{SPR Consulting, Chicago, IL}{
+        Senior software engineer and architect at Uptake Technologies in Chicago
+        where projects and responsibilities included:
+        \begin{itemize}
+            \item Developed a plugin for Apache Kafka Connect to consume Apache
+                Avro-encoded Kafka messages, produce Apache Parquet-encoded files,
+                and upload them to Amazon S3 for use in Amazon Elastic MapReduce.
+            \item Developed a Kafka Streams application to monitor and automatically
+                fix broken Kafka Connect tasks.
+            \item Developed an Apache Spark process for synchronizing a gold and silver
+                Apache HDFS data lake cluster along with Apache Hive metadata.
+            \item Collaborated on a data sandbox interface for the above data lake using
+                Apache Zeppelin, Apache Spark, Apache YARN, Amazon EMR, and other
+                Apache Hadoop projects.
+            \item Developed an enhancement to an in-house deployment manager to support
+                Kafka Connect tasks.
+            \item Wrote internal engineering blog posts and organized internal lunch and
+                learns, and helped with Uptake University.
+            \item Worked with the Open Source Committee as an open source community
+                and project management consultant as well as contributing multiple projects
+                to this including updates to Scalaz, a Log4j Slack plugin, and a Scala compiler
+                patch to help detect incorrectly inferred types.
+            \item Developed an Akka Streams application to query, stream, and export
+                mass amounts of IoT signal data stored in Apache Cassandra to CSV and
+                the REST API for a web UI for visualizing said data.
+        \end{itemize}
+    }
+\end{entrylist}
+\begin{entrylist}
+    \entry{(Cont.)}{Senior Consultant}{SPR Consulting, Chicago, IL}{
+        \begin{itemize}
+            \item Developed a Vert.x microservice for managing user-uploaded media files
+                in a cloud-agnostic fashion.
+            \item Developed an Elasticsearch connection pooling library to help with
+                connectivity issues.
+            \item Developed an integration service in Spring Boot and Reactor for a
+                REST API used for a wind turbine monitoring dashboard along with other
+                production-hardening features like service discovery, client side load
+                balancing, failover, etc., along with Maven to Gradle conversions and
+                migration to using Jenkins pipelines.
+        \end{itemize}
+        At SPR Consulting, I also did part time developer evangelism via technical
+        blogging and speaking at conferences and meetups. Topics include:
+        \begin{itemize}
+            \item Logging from both a developer's and operator's perspective
+                (both blog and talk at Chicago Java User Group, 9 Nov 2017).
+            \item Scala for Java developers (talk at Illinois Java User Group, 11 July 2017).
+            \item Using Akka and Scala to implement event sourcing and CQRS.
+            \item Why use a microservices architecture.
+            \item A proposal on reactive microservice security similar to federation.
+            \item Spring 5, Reactor, and reactive streams.
+            \item The Lagom framework for reactive microservices.
+            \item Use of Apache Avro, Thrift, and alternatives to typical REST/JSON
+                architectures (talk at Mulesoft Connect 2017).
+        \end{itemize}
+        All listed blog items are available on my blog at \url{http://musigma.org/} along
+        with mirrors on \url{http://spr.com/}.
+    }
+\end{entrylist}
+\begin{entrylist}
+    \entry{2014--Now}{VP, Apache Logging Services}{Apache Software Foundation}{
+        Project Management Committee member of the Apache Logging Services project
+        and Member of the Apache Software Foundation.
+        Serving as the PMC Chair (VP) since October 2017. Performs development,
+        support, documentation, and release management for projects including
+        Log4j 2, Log4j Scala API, and Chainsaw. Highlights:
+        \begin{itemize}
+            \item Significant updates to the plugin system to make plugins easier
+                and less tedious to write.
+            \item Streamlining property-based configuration and other config APIs.
+            \item Additional logging system bridges and APIs to make other future
+                logging libraries easier to integrate with.
+            \item Automated test overhauls and documentation updates.
+            \item Additional plugins including an Apache Cassandra appender.
+            \item Release manager for Log4j2, Log4j Scala API, Logging Parent, and Chainsaw.
+            \item Presented at ApacheCon Denver 2014: Intro to Log4j 2.0.
+            \item Presented at CJUG: The How and Why of Logging (9 Nov 2017).
+        \end{itemize}
+        I am also a committer on the Apache Commons project which is a collection
+        of various low-level libraries for use in any Java application including
+        projects such as Apache Commons Pool and Apache Commons DBCP.
+        Other presentations I've done related to Apache include:
+        \begin{itemize}
+            \item Presented at IJUG: Event Driven Architecture Using Apache Kafka (17 Jan 2018).
+            \item Use of Apache Avro, Thrift, and alternatives to typical REST/JSON
+                architectures (panel at Mulesoft Connect 2017).
+        \end{itemize}        
+    }
+\end{entrylist}
+\begin{entrylist}
+    \entry{2013--2014,\\2015--\\Nov 2016}{Senior Software Engineer}{Peapod, Chicago, IL}{
+        Member of the Webcenter division in Peapod responsible for the development and
+        maintenance of our sister grocery store websites (Stop \& Shop, Giant Foods,
+        and Martin's Foods). Highlights:
+        \begin{itemize}
+            \item Collaborated with project managers, QA testers, web developers,
+                database administrators, system administrators, and other engineers
+                to make a content management system integrated with various loyalty,
+                coupon, and user account systems.
+            \item Developed a modular, reactive, REST-driven integration API using
+                Apache Camel, Karaf, ActiveMQ, Netty, Hazelcast, Spark, Hibernate,
+                and various other supporting libraries.
+            \item Developed a Spring MVC proxy application around our ESB to allow
+                OAuth2-protected REST APIs to be used by our websites and mobile apps.
+            \item Administered CentOS VMs that host these applications.
+            \item Developed build and deployment infrastructure using Atlassian
+                Bamboo and Docker.
+            \item Developed a CMS using Oracle Commerce (ATG) on WebLogic.
+        \end{itemize}
+    }
+\end{entrylist}
+\begin{entrylist}
+    \entry{2011--2013}{Principle Engineer}{Deep Dish Development, Mount Prospect, IL}{
+        As one of two co-founders, I administered the business, servers, databases,
+        finances, and other fine details of launching and maintaining a small web
+        development consultancy. Highlights:
+        \begin{itemize}
+            \item Set up and maintained multiple GNU/Linux server environments on
+                AWS running Apache, MySQL, PHP, Ruby, and Java.
+            \item Helped form a business plan and company structure.
+            \item Contributed general programming knowledge, training, and mentoring.
+            \item Managed the company's finances and billing.
+        \end{itemize}
+    }
+\end{entrylist}
+\begin{entrylist}
+    \entry{2011}{Lead Programmer}{LRH Advertising, Glenview, IL}{
+        Full stack web developer for a retirement portal using Drupal and
+        PHP. Highlights:
+        \begin{itemize}
+            \item Migrated server platform to AWS using EC2, S3, RDS, and Route53.
+            \item Developed a prototype social networking site for retirees.
+            \item Administered an Apache web server and MySQL database.
+            \item Introduce the use of Git for version control of the software.
+        \end{itemize}
+    }
+\end{entrylist}
+\begin{entrylist}
+    \entry{2011}{Full Stack Developer/SEO Consultant}{Lights America, Wheeling, IL}{
+        Search engine optimization consultant and general full stack web
+        developer. Here I helped optimize a large network of lighting
+        showroom websites to all load much faster. Highlights:
+        \begin{itemize}
+            \item Migrated image hosting infrastructure to Amazon S3 and CloudFront.
+            \item Modernized legacy HTML sites into clean, standards compliant
+                HTML, CSS, and JavaScript.
+            \item Referred and trained a full time web developer to take over
+                maintenance of the existing sites.
+        \end{itemize}
+    }
+\end{entrylist}
+
+\section{education}
+\begin{entrylist}
+    \entry{2010--2012}{Studied Mathematics, Computer Science}{Roosevelt University, Chicago, IL}{
+        Dual focus in mathematics and computer science with a focus on pure math
+        and machine learning.
+    }
+    \entry{2007--2009}{}{Oakton Community College, Des Plaines, IL}{
+        Completed many core requirements and undergrad classes for mathematics
+        and computer science.
+    }
+\end{entrylist}
+\end{document}
