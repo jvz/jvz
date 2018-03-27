@@ -1,0 +1,22 @@
+addons:
+  apt:
+    packages:
+      - texlive-full
+  ssh_known_hosts: ssh.phx.nearlyfreespeech.net
+
+before_install:
+  - openssl aes-256-cbc -K $encrypted_a4954a2cd512_key -iv $encrypted_a4954a2cd512_iv -in .travis/deploy_key.enc -out .travis/deploy_key -d
+
+script:
+  - pdflatex cv.tex
+  - pdflatex cv.tex
+
+after_success:
+  - eval "$(ssh-agent -s)"
+  - chmod 600 .travis/deploy_key
+  - ssh-add .travis/deploy_key
+  - "scp cv.pdf musigma_musigmablog@ssh.phx.nearlyfreespeech.net:"
+
+branches:
+  only:
+    - master

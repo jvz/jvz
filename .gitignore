@@ -218,3 +218,6 @@ TSWLatexianTemp*
 
 # expex forward references with \gathertags
 *-tags.tex
+
+# private key
+.travis/deploy_key
