@@ -1,25 +1,30 @@
 addons:
   apt:
     packages:
-      - texlive
-      - latex-xcolor
-      - texlive-latex-extra
-      - texlive-fonts-extra
+    - texlive
+    - latex-xcolor
+    - texlive-latex-extra
+    - texlive-fonts-extra
   ssh_known_hosts: ssh.phx.nearlyfreespeech.net
-
 before_install:
-  - openssl aes-256-cbc -K $encrypted_a4954a2cd512_key -iv $encrypted_a4954a2cd512_iv -in .travis/deploy_key.enc -out .travis/deploy_key -d
-
+- openssl aes-256-cbc -K $encrypted_a4954a2cd512_key -iv $encrypted_a4954a2cd512_iv
+  -in .travis/deploy_key.enc -out .travis/deploy_key -d
 script:
-  - pdflatex cv.tex
-  - pdflatex cv.tex
-
+- pdflatex cv.tex
+- pdflatex cv.tex
 after_success:
-  - eval "$(ssh-agent -s)"
-  - chmod 600 .travis/deploy_key
-  - ssh-add .travis/deploy_key
-  - "scp cv.pdf musigma_musigmablog@ssh.phx.nearlyfreespeech.net:"
-
+- eval "$(ssh-agent -s)"
+- chmod 600 .travis/deploy_key
+- ssh-add .travis/deploy_key
+- 'scp cv.pdf musigma_musigmablog@ssh.phx.nearlyfreespeech.net:'
 branches:
   only:
-    - master
+  - master
+deploy:
+  provider: releases
+  api_key:
+    secure: KnkmO6B97JdJPZ2Goc9WGHK1cTasOQeJ+HDNb4sapKNhI6/3wm06WRQoddxpKLRc6yxfHL2ZtBOzO2o15TvSvVzWo3VJPm+Bg8y+3Ep69ehReSyqTIhI/XJwO+sLqldUaJVknbWTZycrc7tYFrTLzqBgbxoeBJ/FSdhqt1qKTVVFUdy16RfF7c7sSS5r0k9vqMk4UDkwQvu0AdIB+Qi+rLFoBx3MAXSTHwcpaioLKEX4AbTE/ahctQw8UXoupJy5rfDxnEO+fxBZ89uQfq62aRUbEXxmjQCc1vqoJXS6Yq8yWNBO6Jeer+k5tPlDulEX0JRvCLuYTjbYhYejbTQKWo58IbE024ghbg1w8pfjr84frH8XzDQgYlk6pjmX7c4ser6Ax5EDUtgcQQKm/wJFjHjjYvp6og/hLIqw37z46yJkHQR5CtiBewgWynJCTTpQdMm637wu1jIhen4pd28jQht1SVRQB1oBwbgztZHQd0lP44l96rLqqkXMSO+FS9wQ6v1K32GXFJ68+NFFVnxVj5gaSe3JaUSa7vPAAh0jTM8OmyZ2/sf0mV1IpvyNZbRyqFZb24aJJ/VWYU6M4jzKJdsNGYNqqDEuUnZ8oOwkDyB2r4vdAZL1sKKWFK+OrXxhChYBzP//KeXIWCGXAIsIF7QRELESh6dMLBImh8C+fGo=
+  file: cv.pdf
+  skip_cleanup: true
+  on:
+    repo: jvz/jvz
