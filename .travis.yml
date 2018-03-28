@@ -1,7 +1,10 @@
 addons:
   apt:
     packages:
-      - texlive-full
+      - texlive
+      - latex-xcolor
+      - texlive-latex-extra
+      - texlive-fonts-extra
   ssh_known_hosts: ssh.phx.nearlyfreespeech.net
 
 before_install:
